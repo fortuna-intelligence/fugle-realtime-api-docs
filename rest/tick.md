@@ -1,5 +1,5 @@
 ## Tick
----
+
 Get tick of a specified symbol.
 
 * **URL**
