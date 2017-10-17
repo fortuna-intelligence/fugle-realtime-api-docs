@@ -1,0 +1,454 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Meta (基本資料) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tick.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Readme</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Fugle Realtime API Docs
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">REST</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="meta.html">
+            
+                <a href="meta.html">
+            
+                    
+                    Meta (基本資料)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="tick.html">
+            
+                <a href="tick.html">
+            
+                    
+                    Tick (即時行情)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="open.html">
+            
+                <a href="open.html">
+            
+                    
+                    Open (所有證券)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="work.html">
+            
+                <a href="work.html">
+            
+                    
+                    Work (有無開盤)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Socket.IO</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../socketio/tick.html">
+            
+                <a href="../socketio/tick.html">
+            
+                    
+                    Tick (即時行情)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contact</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../contact/fugle.html">
+            
+                <a href="../contact/fugle.html">
+            
+                    
+                    Fugle (群馥科技)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Meta (基本資料)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="meta">Meta</h2>
+<hr>
+<p>Get meta of a specified symbol.</p>
+<ul>
+<li><p><strong>URL</strong></p>
+<p>/realtime/meta</p>
+</li>
+<li><p><strong>Method:</strong></p>
+<p><code>POST</code></p>
+</li>
+<li><p><strong>URL Params</strong></p>
+<p>None</p>
+</li>
+<li><p><strong>Data Params</strong></p>
+<p><strong>Interface:</strong></p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> IMetaReq {
+  symbolId: <span class="hljs-built_in">string</span>;
+}
+</code></pre>
+</li>
+<li><p><strong>Success Response:</strong></p>
+<ul>
+<li><p><strong>Code:</strong> 200 OK <br>
+<strong>Content-Type:</strong> <code>application/json</code> <br>
+<strong>Interface:</strong></p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> IMetaRes {
+  time: <span class="hljs-built_in">Date</span>;
+  date: <span class="hljs-built_in">number</span>;
+  mode: <span class="hljs-built_in">string</span>;
+  symbol: {
+    id: <span class="hljs-built_in">string</span>;
+    name: {
+      zh: <span class="hljs-built_in">string</span>;
+      en: <span class="hljs-built_in">string</span>;
+    };
+    industry: <span class="hljs-built_in">string</span>;
+    category: <span class="hljs-built_in">string</span>;
+    sme: <span class="hljs-built_in">boolean</span>;
+    index: <span class="hljs-built_in">boolean</span>;
+  };
+  volume: {
+    total: <span class="hljs-built_in">number</span>
+  };
+  price: {
+    ref: <span class="hljs-built_in">number</span>;
+    up: <span class="hljs-built_in">number</span>;
+    down: <span class="hljs-built_in">number</span>;
+    open: <span class="hljs-built_in">number</span>;
+    close: <span class="hljs-built_in">number</span>;
+  };
+  note: {
+    index: <span class="hljs-built_in">boolean</span>;
+    abnormal: {
+      bool: <span class="hljs-built_in">boolean</span>;
+      status: <span class="hljs-built_in">string</span>;
+      intro: <span class="hljs-built_in">boolean</span>;
+      special: <span class="hljs-built_in">boolean</span>;
+      since: <span class="hljs-built_in">Date</span>;
+    };
+    ten: <span class="hljs-built_in">boolean</span>;
+    day: {
+      buySell: <span class="hljs-built_in">boolean</span>;
+      sellBuy: <span class="hljs-built_in">boolean</span>;
+    };
+    short: <span class="hljs-built_in">boolean</span>;
+    lend: <span class="hljs-built_in">boolean</span>;
+    duration: <span class="hljs-built_in">number</span>;
+  };
+  warrant: {
+    price: {
+      exer: <span class="hljs-built_in">number</span>;
+      upper: <span class="hljs-built_in">number</span>;
+      lower: <span class="hljs-built_in">number</span>;
+    };
+    volume: {
+      ytd: {
+        exer: <span class="hljs-built_in">number</span>;
+        cancel: <span class="hljs-built_in">number</span>;
+      };
+      bal: <span class="hljs-built_in">number</span>;
+    };
+    ratio: <span class="hljs-built_in">number</span>;
+    expiry: <span class="hljs-built_in">Date</span>;
+  };
+  other: {
+    foreign: <span class="hljs-built_in">boolean</span>;
+    deal: {
+      unit: <span class="hljs-built_in">number</span>;
+      currency: <span class="hljs-built_in">string</span>;
+    };
+  };
+  ip: <span class="hljs-built_in">string</span>;
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>Error Response:</strong></p>
+<ul>
+<li><strong>Code:</strong> 403 Forbidden <br>
+<strong>Content:</strong> None <br>
+<strong>Description:</strong> Login required</li>
+</ul>
+<p>OR</p>
+<ul>
+<li><strong>Code:</strong> 404 Not Found <br>
+<strong>Content:</strong> None <br>
+<strong>Description:</strong> <code>symbolId</code> does not exist</li>
+</ul>
+<p>OR</p>
+<ul>
+<li><strong>Code:</strong> 422 Unprocessable Entity <br>
+<strong>Content:</strong> None <br>
+<strong>Description:</strong> <code>symbolId</code> must be provided</li>
+</ul>
+</li>
+</ul>
+<div class="api-method"><div class="api-method-definition"><ul>
+<li><strong>Sample Call:</strong></li>
+</ul>
+</div><div class="api-method-code"><div class="api-method-sample" data-lang="sh" data-name="Shell"><pre><code class="lang-sh">curl -H <span class="hljs-string">&quot;Content-Type: application/json&quot;</span> -X POST <span class="hljs-_">-d</span> <span class="hljs-string">&apos;{&quot;date&quot;: &quot;20171228&quot;}&apos;</span> https://realtime-api-1.fugle.tw/realtime/work|jq
+</code></pre>
+</div><div class="api-method-sample" data-lang="js" data-name="JavaScript"><pre><code class="lang-js">fetch(<span class="hljs-string">&apos;/realtime/meta&apos;</span>, {
+  method: <span class="hljs-string">&apos;POST&apos;</span>,
+  credentials: <span class="hljs-string">&apos;include&apos;</span>,
+  headers: {
+    <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;application/json&apos;</span>,
+  },
+  body: <span class="hljs-built_in">JSON</span>.stringify({
+    symbolId: <span class="hljs-string">&apos;2330&apos;</span>,
+  }),
+});
+</code></pre>
+</div></div></div>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Meta (基本資料)","level":"2.1","depth":1,"next":{"title":"Tick (即時行情)","level":"2.2","depth":1,"path":"rest/tick.md","ref":"rest/tick.md","articles":[]},"previous":{"title":"Fugle Realtime API Docs","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","theme-api"],"pluginsConfig":{"theme-api":{"languages":[{"default":true,"lang":"sh","name":"Shell"},{"lang":"js","name":"JavaScript"}],"split":false,"theme":"dark"},"search-pro":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"rest/meta.md","mtime":"2017-10-17T00:26:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-10-17T16:46:11.756Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

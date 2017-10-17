@@ -1,0 +1,20 @@
+{
+  "plugins": ["-lunr", "-search", "search-pro", "theme-api"],
+  "pluginsConfig": {
+    "theme-api": {
+      "languages": [
+        {
+          "default": true,
+          "lang": "sh",
+          "name": "Shell"
+        },
+        {
+          "lang": "js",
+          "name": "JavaScript"
+        }
+      ],
+      "split": false,
+      "theme": "dark"
+    }
+  }
+}
